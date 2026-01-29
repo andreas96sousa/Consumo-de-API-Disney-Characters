@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./assets/logo.jpg" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="globals.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -10,65 +11,27 @@
 </head>
 
 <body class="w-full h-full flex justify-center items-center bg-black text-white">
-    <div class="w-[80%] h-[80%] bg-gray-900 rounded-3xl flex" id="pageData">
-        
-        <div id="searchAndData" class="w-[70%] h-full flex flex-col flex-nowrap">
-            
-            <div id="searchBox" class="w-full h-[15%] gap-3 p-3
-            flex justify-center items-center">
-                <input type="text" placeholder="Nome do Personagem ou ID (112-10104)" name="searchInput" id="searchInput"
-                class="w-[70%] h-[80%] bg-slate-200 text-gray-950 rounded-lg shadow-md shadow-black p-2 italic">
-                <button id="searchButton" class="w-[20%] h-[80%] bg-slate-800 cursor-pointer rounded-lg shadow-md shadow-black font-bold italic hover:bg-slate-700 transition">
-                    Buscar
+    <div class="w-[80%] h-[80%] bg-gray-900 rounded-3xl flex flex-col items-center justify-between" id="pageData">
+        <div class="w-full h-[60%] flex flex-col items-center gap-3 justify-center">
+            <h1 class="text-6xl font-bold ">Consumo de API's</h1>
+            <h2 class="text-3xl italic">Disney Characters API's</h1>
+        </div>
+        <button id="testerButton" class="w-[20%] h-[20%] bg-slate-800 cursor-pointer rounded-lg shadow-md shadow-black font-bold italic hover:bg-slate-700 transition mb-25">
+                    Testar Agora
                 </button>
-             </div>
+        <h3 class="text-lg pb-3">Desenvolvido por <span class="italic font-bold text-sky-500 drop-shadow-lg">Andreas Sousa</span></h3>
 
-             
-             <div id="dataBox" 
-                class="w-full h-[85%] p-3 flex flex-col gap-2 justify-between items-center">
-
-                <div id="idName" class="w-full h-[15%] gap-3 flex justify-between items-center">
-                    <div id="" class="w-[10%] h-full border-r-3 flex items-center justify-center">
-                        <h2 id="id" class="text-2xl font-bold">
-                            
-                        </h2>
-                    </div>
-                    <div id="" class="w-[90%] h-full flex items-center justify-start pl-1">
-                        <h1 id="nome" class="font-bold text-3xl">
-                           
-                        </h1>
-                    </div>
-                </div>
-
-                <div id="dataBody" class="h-[85%] w-full gap-3 flex justify-between items-end">
-                    <div id="left" class="overflow-y-auto w-[50%] h-full bg-slate-800 rounded-lg shadow-md shadow-black p-2">
-                        <span id="listLeft" class="italic mb-2 font-bold">Lista de Filmes: </span>
-                        <ul id="filmList" class="ml-4">
-                            
-                        </ul>
-                    </div> 
-                    <div id="right" class="overflow-y-auto w-[50%] h-full bg-slate-800 rounded-lg shadow-md shadow-black p-2">
-                        <span id="listRight" class="italic mb-2 font-bold">Lista de Jogos: </span>
-                        <ul id="gameList" class="ml-4">
-                            
-                        </ul>
-                    </div>
-                </div> 
-
-            </div>
-
-        </div>
-
-        <div id="imageBox" class="w-[30%] gap-5 bg-gray-800 p-5 rounded-e-3xl">
-            <div id="image" class="w-full h-full bg-stone-950 flex justify-center items-center">
-                
-            </div>
-        </div>
 
     </div>
 
 
-    <script type="module" src="globals.js"></script>
 </body>
+
+<script>
+    const testerButton = document.querySelector("#testerButton")
+    testerButton.addEventListener("click", () => {
+        window.location.href = "SearchPage.html";
+    })
+</script>
 
 </html>
