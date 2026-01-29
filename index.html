@@ -16,7 +16,7 @@
             <h1 class="text-6xl font-bold ">Consumo de API's</h1>
             <h2 class="text-3xl italic">Disney Characters API's</h1>
         </div>
-        <button id="testerButton" class="w-[20%] h-[20%] bg-slate-800 cursor-pointer rounded-lg shadow-md shadow-black font-bold italic hover:bg-slate-700 transition mb-25">
+        <button id="testerButton" onclick="window.location.href='SearchPage.html';" class="w-[20%] h-[20%] bg-slate-800 cursor-pointer rounded-lg shadow-md shadow-black font-bold italic hover:bg-slate-700 transition mb-25">
                     Testar Agora
                 </button>
         <h3 class="text-lg pb-3">Desenvolvido por <span class="italic font-bold text-sky-500 drop-shadow-lg">Andreas Sousa</span></h3>
@@ -27,11 +27,5 @@
 
 </body>
 
-<script>
-    const testerButton = document.querySelector("#testerButton")
-    testerButton.addEventListener("click", () => {
-        window.location.href = "https://consumo-de-api-disney-characters.vercel.app/SearchPage.html"
-    })
-</script>
 
 </html>
