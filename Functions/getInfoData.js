@@ -2,11 +2,12 @@
 import { getIdToLocate } from "./getIdToLocate.js"
 
 export async function getInfoData(param, id, nome, films, games, imgUrl, listLeft, listRight) {
+
     const verifyIsNumber = param / param
 
     const dataFetch = await fetch(`https://api.disneyapi.dev/character?name=${param}&page=1&pageSize=9992`)
     const data = await dataFetch.json()
-    let totalCount = data.info.count
+    let totalCount = Number(data.info.count)
 
     if (totalCount < 10) {
         totalCount = 10
